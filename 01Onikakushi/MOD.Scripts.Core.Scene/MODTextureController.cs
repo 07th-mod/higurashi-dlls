@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace MOD.Scripts.Core.Scene
 {
-	internal class MODTextureController
+	public class MODTextureController
 	{
 		private IDictionary<int, string> _layerTexture;
 
