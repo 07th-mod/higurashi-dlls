@@ -75,63 +75,41 @@ namespace BGICompiler.Compiler
 
 		public bool IsMath(string s)
 		{
-			if (s != null)
+			switch (s)
 			{
-				if (_003C_003Ef__switch_0024map2 == null)
-				{
-					Dictionary<string, int> dictionary = new Dictionary<string, int>(11);
-					dictionary.Add("==", 0);
-					dictionary.Add("!=", 1);
-					dictionary.Add("<=", 2);
-					dictionary.Add(">=", 3);
-					dictionary.Add(">", 4);
-					dictionary.Add("<", 5);
-					dictionary.Add("+", 6);
-					dictionary.Add("-", 7);
-					dictionary.Add("*", 8);
-					dictionary.Add("/", 9);
-					dictionary.Add("%", 10);
-					_003C_003Ef__switch_0024map2 = dictionary;
-				}
-				if (_003C_003Ef__switch_0024map2.TryGetValue(s, out int value))
-				{
-					switch (value)
-					{
-					case 0:
-						mathType = BurikoMathType.Equals;
-						return true;
-					case 1:
-						mathType = BurikoMathType.NotEquals;
-						return true;
-					case 2:
-						mathType = BurikoMathType.LessThanOrEquals;
-						return true;
-					case 3:
-						mathType = BurikoMathType.GreaterThanOrEquals;
-						return true;
-					case 4:
-						mathType = BurikoMathType.GreaterThan;
-						return true;
-					case 5:
-						mathType = BurikoMathType.LessThan;
-						return true;
-					case 6:
-						mathType = BurikoMathType.Add;
-						return true;
-					case 7:
-						mathType = BurikoMathType.Subtract;
-						return true;
-					case 8:
-						mathType = BurikoMathType.Multiply;
-						return true;
-					case 9:
-						mathType = BurikoMathType.Divide;
-						return true;
-					case 10:
-						mathType = BurikoMathType.Modulus;
-						return true;
-					}
-				}
+				case "==":
+					this.mathType = BurikoMathType.Equals;
+					return true;
+				case "!=":
+					this.mathType = BurikoMathType.NotEquals;
+					return true;
+				case "<=":
+					this.mathType = BurikoMathType.LessThanOrEquals;
+					return true;
+				case ">=":
+					this.mathType = BurikoMathType.GreaterThanOrEquals;
+					return true;
+				case ">":
+					this.mathType = BurikoMathType.GreaterThan;
+					return true;
+				case "<":
+					this.mathType = BurikoMathType.LessThan;
+					return true;
+				case "+":
+					this.mathType = BurikoMathType.Add;
+					return true;
+				case "-":
+					this.mathType = BurikoMathType.Subtract;
+					return true;
+				case "*":
+					this.mathType = BurikoMathType.Multiply;
+					return true;
+				case "/":
+					this.mathType = BurikoMathType.Divide;
+					return true;
+				case "%":
+					this.mathType = BurikoMathType.Modulus;
+					return true;
 			}
 			return false;
 		}
