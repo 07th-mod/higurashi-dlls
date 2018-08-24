@@ -38,42 +38,24 @@ namespace Assets.Scripts.UI.SaveLoad
 				return;
 			}
 			string name = base.name;
-			if (name != null)
+			switch (name)
 			{
-				if (_003C_003Ef__switch_0024map6 == null)
-				{
-					Dictionary<string, int> dictionary = new Dictionary<string, int>(7);
-					dictionary.Add("Save", 0);
-					dictionary.Add("0-Save", 0);
-					dictionary.Add("Load", 1);
-					dictionary.Add("1-Load", 1);
-					dictionary.Add("2-Edit", 2);
-					dictionary.Add("3-Delete", 3);
-					dictionary.Add("Return", 4);
-					_003C_003Ef__switch_0024map6 = dictionary;
-				}
-				if (_003C_003Ef__switch_0024map6.TryGetValue(name, out int value))
-				{
-					switch (value)
-					{
-					case 0:
-						break;
-					case 1:
-						goto IL_0158;
-					case 2:
-						goto IL_01cb;
-					case 3:
-						goto IL_025a;
-					case 4:
-						goto IL_02c0;
-					default:
-						goto IL_02d1;
-					}
+				case "Save":
+				case "0-Save":
 					manager.Save(slot);
 					goto IL_02e0;
-				}
+				case "Load":
+				case "1-Load":
+					goto IL_0158;
+				case "2-Edit":
+					goto IL_01cb;
+				case "3-Delete":
+					goto IL_025a;
+				case "Return":
+					goto IL_02c0;
+				default:
+					goto IL_02d1;
 			}
-			goto IL_02d1;
 			IL_0158:
 			SaveEntry d5 = BurikoScriptSystem.Instance.GetSaveInfo(slot);
 			if (d5 == null)
