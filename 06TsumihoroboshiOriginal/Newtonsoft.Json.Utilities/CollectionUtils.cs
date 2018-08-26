@@ -203,7 +203,7 @@ namespace Newtonsoft.Json.Utilities
 
 		public static bool TryGetSingleItem<T>(IList<T> list, out T value)
 		{
-			return TryGetSingleItem(list, returnDefaultIfEmpty: false, out value);
+			return TryGetSingleItem(list, /*returnDefaultIfEmpty:*/ false, out value);
 		}
 
 		public static bool TryGetSingleItem<T>(IList<T> list, bool returnDefaultIfEmpty, out T value)
@@ -213,7 +213,7 @@ namespace Newtonsoft.Json.Utilities
 
 		public static T GetSingleItem<T>(IList<T> list)
 		{
-			return GetSingleItem(list, returnDefaultIfEmpty: false);
+			return GetSingleItem(list, /*returnDefaultIfEmpty:*/ false);
 		}
 
 		public static T GetSingleItem<T>(IList<T> list, bool returnDefaultIfEmpty)

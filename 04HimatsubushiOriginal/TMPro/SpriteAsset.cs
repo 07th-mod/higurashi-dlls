@@ -23,7 +23,7 @@ namespace TMPro
 
 		private void OnValidate()
 		{
-			TMPro_EventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(isChanged: true, this);
+			TMPro_EventManager.ON_SPRITE_ASSET_PROPERTY_CHANGED(/*isChanged:*/ true, this);
 		}
 	}
 }

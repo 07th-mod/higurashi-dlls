@@ -861,7 +861,7 @@ namespace Newtonsoft.Json.Serialization
 						}
 						if (!jsonProperty.Ignored)
 						{
-							dictionary[jsonProperty] = CreateValueProperty(reader, jsonProperty, null, gottenCurrentValue: true, null);
+							dictionary[jsonProperty] = CreateValueProperty(reader, jsonProperty, null, /*gottenCurrentValue:*/ true, null);
 						}
 						else
 						{

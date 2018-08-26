@@ -800,7 +800,7 @@ public class UIWidget : UIRect
 	{
 		if (mStarted && panel == null && base.enabled && NGUITools.GetActive(base.gameObject))
 		{
-			panel = UIPanel.Find(base.cachedTransform, createIfMissing: true, base.cachedGameObject.layer);
+			panel = UIPanel.Find(base.cachedTransform, /*createIfMissing:*/ true, base.cachedGameObject.layer);
 			if (panel != null)
 			{
 				mParentFound = false;
@@ -826,7 +826,7 @@ public class UIWidget : UIRect
 		base.ParentHasChanged();
 		if (panel != null)
 		{
-			UIPanel y = UIPanel.Find(base.cachedTransform, createIfMissing: true, base.cachedGameObject.layer);
+			UIPanel y = UIPanel.Find(base.cachedTransform, /*createIfMissing:*/ true, base.cachedGameObject.layer);
 			if (panel != y)
 			{
 				RemoveFromPanel();

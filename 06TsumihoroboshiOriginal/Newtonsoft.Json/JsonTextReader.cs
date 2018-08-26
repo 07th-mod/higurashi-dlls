@@ -528,7 +528,7 @@ namespace Newtonsoft.Json
 			if (c != ':')
 			{
 				c = MoveNext();
-				EatWhitespace(c, oneOrMore: false, out c);
+				EatWhitespace(c, /*oneOrMore:*/ false, out c);
 				if (c != ':')
 				{
 					throw CreateJsonReaderException("Invalid character after parsing property name. Expected ':' but got: {0}. Line {1}, position {2}.", c, _currentLineNumber, _currentLinePosition);
@@ -677,14 +677,14 @@ namespace Newtonsoft.Json
 			if (MatchValue('n', "new", noTrailingNonSeperatorCharacters: true))
 			{
 				char finalChar = MoveNext();
-				if (EatWhitespace(finalChar, oneOrMore: true, out finalChar))
+				if (EatWhitespace(finalChar, /*oneOrMore:*/ true, out finalChar))
 				{
 					while (char.IsLetter(finalChar))
 					{
 						_buffer.Append(finalChar);
 						finalChar = MoveNext();
 					}
-					EatWhitespace(finalChar, oneOrMore: false, out finalChar);
+					EatWhitespace(finalChar, /*oneOrMore:*/ false, out finalChar);
 					if (finalChar != '(')
 					{
 						throw CreateJsonReaderException("Unexpected character while parsing constructor: {0}. Line {1}, position {2}.", finalChar, _currentLineNumber, _currentLinePosition);

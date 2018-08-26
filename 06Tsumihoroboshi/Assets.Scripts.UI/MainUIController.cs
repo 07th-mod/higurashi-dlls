@@ -112,7 +112,7 @@ namespace Assets.Scripts.UI
 				bgLayer.SetPriority(62);
 				bgLayer.name = "Window Background";
 				bgLayer.IsStatic = true;
-				bgLayer.DrawLayer(textureName, 0, 0, 0, null, gameSystem.MessageWindowOpacity, isBustshot: false, 0, time, isBlocking: false);
+				bgLayer.DrawLayer(textureName, 0, 0, 0, null, gameSystem.MessageWindowOpacity, /*isBustshot:*/ false, 0, time, /*isBlocking:*/ false);
 			}
 		}
 
@@ -387,7 +387,7 @@ namespace Assets.Scripts.UI
 				BurikoMemory.Instance.SetGlobalFlag("GADVMode", 0);
 				BurikoMemory.Instance.SetGlobalFlag("GLinemodeSp", 2);
 				GameSystem.Instance.MainUIController.bgLayer.ReleaseTextures();
-				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter", 0, 0, 0, null, gameSystem.MessageWindowOpacity, isBustshot: false, 0, 0f, isBlocking: false);
+				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter", 0, 0, 0, null, gameSystem.MessageWindowOpacity, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 				mODMainUIController.NVLModeSettingStore();
 			}
 			else
@@ -395,7 +395,7 @@ namespace Assets.Scripts.UI
 				BurikoMemory.Instance.SetGlobalFlag("GADVMode", 1);
 				BurikoMemory.Instance.SetGlobalFlag("GLinemodeSp", 0);
 				GameSystem.Instance.MainUIController.bgLayer.ReleaseTextures();
-				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_adv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, isBustshot: false, 0, 0f, isBlocking: false);
+				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_adv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 				mODMainUIController.ADVModeSettingStore();
 			}
 		}
@@ -408,7 +408,7 @@ namespace Assets.Scripts.UI
 				MODMainUIController mODMainUIController = new MODMainUIController();
 				BurikoMemory.Instance.SetGlobalFlag("GLinemodeSp", 2);
 				GameSystem.Instance.MainUIController.bgLayer.ReleaseTextures();
-				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_nvladv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, isBustshot: false, 0, 0f, isBlocking: false);
+				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_nvladv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 				mODMainUIController.NVLADVModeSettingStore();
 			}
 		}
@@ -421,7 +421,7 @@ namespace Assets.Scripts.UI
 				MODMainUIController mODMainUIController = new MODMainUIController();
 				BurikoMemory.Instance.SetGlobalFlag("GLinemodeSp", 0);
 				GameSystem.Instance.MainUIController.bgLayer.ReleaseTextures();
-				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_adv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, isBustshot: false, 0, 0f, isBlocking: false);
+				GameSystem.Instance.MainUIController.bgLayer.DrawLayer("windo_filter_adv", 0, 0, 0, null, gameSystem.MessageWindowOpacity, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 				mODMainUIController.ADVModeSettingStore();
 			}
 		}

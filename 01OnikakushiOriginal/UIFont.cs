@@ -603,7 +603,7 @@ public class UIFont : MonoBehaviour
 
 	public void AddSymbol(string sequence, string spriteName)
 	{
-		BMSymbol symbol = GetSymbol(sequence, createIfMissing: true);
+		BMSymbol symbol = GetSymbol(sequence, /*createIfMissing:*/ true);
 		symbol.spriteName = spriteName;
 		MarkAsChanged();
 	}

@@ -119,7 +119,7 @@ namespace Newtonsoft.Json.Bson
 		}
 
 		public BsonReader(Stream stream)
-			: this(stream, readRootValueAsArray: false, DateTimeKind.Local)
+			: this(stream, /*readRootValueAsArray:*/ false, DateTimeKind.Local)
 		{
 		}
 

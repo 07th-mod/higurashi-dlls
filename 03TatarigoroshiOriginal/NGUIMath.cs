@@ -361,7 +361,7 @@ public static class NGUIMath
 			Matrix4x4 toLocal = relativeTo.worldToLocalMatrix;
 			Vector3 vMin = new Vector3(3.40282347E+38f, 3.40282347E+38f, 3.40282347E+38f);
 			Vector3 vMax = new Vector3(-3.40282347E+38f, -3.40282347E+38f, -3.40282347E+38f);
-			CalculateRelativeWidgetBounds(content, considerInactive, isRoot: true, ref toLocal, ref vMin, ref vMax, ref isSet);
+			CalculateRelativeWidgetBounds(content, considerInactive, /*isRoot:*/ true, ref toLocal, ref vMin, ref vMax, ref isSet);
 			if (isSet)
 			{
 				Bounds result = new Bounds(vMin, Vector3.zero);
@@ -453,7 +453,7 @@ public static class NGUIMath
 					int k = 0;
 					for (int childCount = content.childCount; k < childCount; k++)
 					{
-						CalculateRelativeWidgetBounds(content.GetChild(k), considerInactive, isRoot: false, ref toLocal, ref vMin, ref vMax, ref isSet);
+						CalculateRelativeWidgetBounds(content.GetChild(k), considerInactive, /*isRoot:*/ false, ref toLocal, ref vMin, ref vMax, ref isSet);
 					}
 				}
 			}

@@ -332,7 +332,7 @@ public static class NGUIText
 		bool underline = false;
 		bool strike = false;
 		bool ignoreColor = false;
-		return ParseSymbol(text, ref index, null, premultiply: false, ref sub, ref bold, ref italic, ref underline, ref strike, ref ignoreColor);
+		return ParseSymbol(text, ref index, null, /*premultiply:*/ false, ref sub, ref bold, ref italic, ref underline, ref strike, ref ignoreColor);
 	}
 
 	[DebuggerStepThrough]
@@ -544,7 +544,7 @@ public static class NGUIText
 					bool strike = false;
 					bool ignoreColor = false;
 					int index = num;
-					if (ParseSymbol(text, ref index, null, premultiply: false, ref sub, ref bold, ref italic, ref underline, ref strike, ref ignoreColor))
+					if (ParseSymbol(text, ref index, null, /*premultiply:*/ false, ref sub, ref bold, ref italic, ref underline, ref strike, ref ignoreColor))
 					{
 						text = text.Remove(num, index - num);
 						length = text.Length;

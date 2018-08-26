@@ -51,9 +51,9 @@ public class Polygon : MonoBehaviour
 	{
 		if (Application.isPlaying)
 		{
-			GetComponent<MeshCollider>().sharedMesh = GenerateMesh(PolygonCollider.GenerateFront, PolygonCollider.GenerateBack, PolygonCollider.GenerateSides, PolygonCollider.Extrude, PolygonCollider.Elevation, useNormals: true, useUVS: true, Vector2.one, Vector2.one, Vector2.one);
+			GetComponent<MeshCollider>().sharedMesh = GenerateMesh(PolygonCollider.GenerateFront, PolygonCollider.GenerateBack, PolygonCollider.GenerateSides, PolygonCollider.Extrude, PolygonCollider.Elevation, /*useNormals:*/ true, /*useUVS:*/ true, Vector2.one, Vector2.one, Vector2.one);
 		}
-		Mesh mesh = GenerateMesh(PolygonMesh.GenerateFront, PolygonMesh.GenerateBack, PolygonMesh.GenerateSides, PolygonMesh.Extrude, PolygonMesh.Elevation, useNormals: true, useUVS: true, FrontUVScale, BackUVScale, SideUVScale);
+		Mesh mesh = GenerateMesh(PolygonMesh.GenerateFront, PolygonMesh.GenerateBack, PolygonMesh.GenerateSides, PolygonMesh.Extrude, PolygonMesh.Elevation, /*useNormals:*/ true, /*useUVS:*/ true, FrontUVScale, BackUVScale, SideUVScale);
 		GetComponent<MeshFilter>().mesh = mesh;
 	}
 

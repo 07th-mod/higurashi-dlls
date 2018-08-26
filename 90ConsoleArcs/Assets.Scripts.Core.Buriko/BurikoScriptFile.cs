@@ -1517,11 +1517,11 @@ namespace Assets.Scripts.Core.Buriko
 			}
 			if (num == 2)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, 180, 0, 0, 160, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, 180, 0, 0, 160, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 3)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, -180, 0, 0, -160, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, -180, 0, 0, -160, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			return BurikoVariable.Null;
 		}
@@ -1538,19 +1538,19 @@ namespace Assets.Scripts.Core.Buriko
 			}
 			if (num == 5)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, 0, 0, 0, 20, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, 0, 0, 0, 20, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 6)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, 220, 0, 0, 200, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, 220, 0, 0, 200, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 7)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, -220, 0, 0, -200, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, -220, 0, 0, -200, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 8)
 			{
-				gameSystem.SceneController.DrawBustshot(num, textureName, 0, 0, 0, 20, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(num, textureName, 0, 0, 0, 20, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			return BurikoVariable.Null;
 		}
@@ -1567,19 +1567,19 @@ namespace Assets.Scripts.Core.Buriko
 			}
 			if (num == 5)
 			{
-				gameSystem.SceneController.DrawBustshot(5, textureName, 0, 0, 0, -20, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(5, textureName, 0, 0, 0, -20, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 6)
 			{
-				gameSystem.SceneController.DrawBustshot(6, textureName, 220, 0, 0, 200, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(6, textureName, 220, 0, 0, 200, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 7)
 			{
-				gameSystem.SceneController.DrawBustshot(7, textureName, -220, 0, 0, -200, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(7, textureName, -220, 0, 0, -200, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			if (num == 8)
 			{
-				gameSystem.SceneController.DrawBustshot(8, textureName, 0, 0, 0, -20, 0, 0, move: true, num, 0, wait, isblocking: false);
+				gameSystem.SceneController.DrawBustshot(8, textureName, 0, 0, 0, -20, 0, 0, /*move:*/ true, num, 0, wait, /*isblocking:*/ false);
 			}
 			return BurikoVariable.Null;
 		}

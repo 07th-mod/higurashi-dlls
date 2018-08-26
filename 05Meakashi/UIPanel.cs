@@ -1472,7 +1472,7 @@ public class UIPanel : UIRect
 
 	public static UIPanel Find(Transform trans)
 	{
-		return Find(trans, createIfMissing: false, -1);
+		return Find(trans, /*createIfMissing:*/ false, -1);
 	}
 
 	public static UIPanel Find(Transform trans, bool createIfMissing)
@@ -1487,7 +1487,7 @@ public class UIPanel : UIRect
 		{
 			return uIPanel;
 		}
-		return (!createIfMissing) ? null : NGUITools.CreateUI(trans, advanced3D: false, layer);
+		return (!createIfMissing) ? null : NGUITools.CreateUI(trans, /*advanced3D:*/ false, layer);
 	}
 
 	private Vector2 GetWindowSize()

@@ -96,7 +96,7 @@ namespace MOD.Scripts.Core.Scene
 			int priority = MODLipSync_Priority[charnum];
 			int type = MODLipSync_Type[charnum];
 			Texture2D tex2d = GameSystem.Instance.AssetManager.LoadTexture(textureName);
-			GameSystem.Instance.SceneController.MODDrawBustshot(layer, textureName, tex2d, x, y, z, 0, 0, 0, move: false, priority, type, 0f, isblocking: false);
+			GameSystem.Instance.SceneController.MODDrawBustshot(layer, textureName, tex2d, x, y, z, 0, 0, 0, /*move:*/ false, priority, type, 0f, /*isblocking:*/ false);
 		}
 
 		public Texture2D MODLipSyncPrepare_fix(int charnum, string expressionnum)
@@ -182,7 +182,7 @@ namespace MOD.Scripts.Core.Scene
 				int z = MODLipSync_Z[charnum];
 				int priority = MODLipSync_Priority[charnum];
 				int type = MODLipSync_Type[charnum];
-				GameSystem.Instance.SceneController.MODDrawBustshot(layer, textureName, tex2d, x, y, z, 0, 0, 0, move: false, priority, type, 0f, isblocking: false);
+				GameSystem.Instance.SceneController.MODDrawBustshot(layer, textureName, tex2d, x, y, z, 0, 0, 0, /*move:*/ false, priority, type, 0f, /*isblocking:*/ false);
 			}
 		}
 	}

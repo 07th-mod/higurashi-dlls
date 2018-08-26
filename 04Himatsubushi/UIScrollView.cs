@@ -722,7 +722,7 @@ public class UIScrollView : MonoBehaviour
 				}
 				if (restrictWithinPanel && mPanel.clipping != 0 && dragEffect != DragEffect.MomentumAndSpring)
 				{
-					RestrictWithinBounds(instant: true, canMoveHorizontally, canMoveVertically);
+					RestrictWithinBounds(/*instant:*/ true, canMoveHorizontally, canMoveVertically);
 				}
 			}
 		}
@@ -818,7 +818,7 @@ public class UIScrollView : MonoBehaviour
 							}
 							else
 							{
-								RestrictWithinBounds(instant: false, canMoveHorizontally, canMoveVertically);
+								RestrictWithinBounds(/*instant:*/ false, canMoveHorizontally, canMoveVertically);
 							}
 						}
 						if (onMomentumMove != null)

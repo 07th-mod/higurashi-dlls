@@ -641,7 +641,7 @@ namespace RenderHeads.Media.AVProVideo
 				if (_texture == null && _width > 0 && _height > 0 && texturePointer != IntPtr.Zero)
 				{
 					_isTextureTopDown = Native.IsTextureTopDown(_instance);
-					_texture = Texture2D.CreateExternalTexture(_width, _height, TextureFormat.RGBA32, mipmap: false, linear: false, texturePointer);
+					_texture = Texture2D.CreateExternalTexture(_width, _height, TextureFormat.RGBA32, /*mipmap:*/ false, /*linear:*/ false, texturePointer);
 					if (_texture != null)
 					{
 						_nativeTexture = texturePointer;

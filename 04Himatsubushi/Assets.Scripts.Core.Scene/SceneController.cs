@@ -178,7 +178,7 @@ namespace Assets.Scripts.Core.Scene
 				oldy = y;
 				oldz = z;
 			}
-			i.DrawLayer(textureName, oldx, oldy, oldz, null, 1f, isBustshot: true, type, wait, isblocking);
+			i.DrawLayer(textureName, oldx, oldy, oldz, null, 1f, /*isBustshot:*/ true, type, wait, isblocking);
 			i.SetPriority(priority);
 			if (move)
 			{
@@ -230,7 +230,7 @@ namespace Assets.Scripts.Core.Scene
 			{
 				origin = new Vector2((float)originx, (float)originy);
 			}
-			i.DrawLayerWithMask(textureName, mask, oldx, oldy, origin, isBustshot: true, type, wait, isblocking);
+			i.DrawLayerWithMask(textureName, mask, oldx, oldy, origin, /*isBustshot:*/ true, type, wait, isblocking);
 			i.SetPriority(priority);
 			if (move)
 			{
@@ -264,7 +264,7 @@ namespace Assets.Scripts.Core.Scene
 			}
 			if (textureName != string.Empty)
 			{
-				layer2.DrawLayer(textureName, x2, y2, z2, null, 1f, isBustshot: true, 0, wait, isBlocking: false);
+				layer2.DrawLayer(textureName, x2, y2, z2, null, 1f, /*isBustshot:*/ true, 0, wait, isBlocking: false);
 			}
 			layer2.MoveLayer(x, y, z, 1f, 0, wait, isblocking, adjustAlpha: true);
 		}
@@ -283,7 +283,7 @@ namespace Assets.Scripts.Core.Scene
 		{
 			Layer layer2 = GetLayer(layer);
 			UpdateLayerMask(layer2, priority);
-			layer2.DrawLayerWithMask(texture, mask, x, y, null, isBustshot: false, style, wait, isBlocking);
+			layer2.DrawLayerWithMask(texture, mask, x, y, null, /*isBustshot:*/ false, style, wait, isBlocking);
 			layer2.SetPriority(priority);
 		}
 
@@ -305,7 +305,7 @@ namespace Assets.Scripts.Core.Scene
 			{
 				origin = new Vector2((float)originx, (float)originy);
 			}
-			layer2.DrawLayer(texture, x, y, z, origin, 1f - alpha, isBustshot: false, 0, wait, isblocking);
+			layer2.DrawLayer(texture, x, y, z, origin, 1f - alpha, /*isBustshot:*/ false, 0, wait, isblocking);
 			layer2.SetAngle((float)angle, 0f);
 			layer2.SetPriority(priority);
 			if (style == 1)
@@ -316,7 +316,7 @@ namespace Assets.Scripts.Core.Scene
 
 		public void DrawBG(string texture, float wait, bool isblocking)
 		{
-			GetActiveScene().BackgroundLayer.DrawLayer(texture, 0, 0, 0, null, 0f, isBustshot: false, 0, wait, isblocking);
+			GetActiveScene().BackgroundLayer.DrawLayer(texture, 0, 0, 0, null, 0f, /*isBustshot:*/ false, 0, wait, isblocking);
 		}
 
 		public void SetFaceToUpperLayer(bool isUpper)
@@ -338,7 +338,7 @@ namespace Assets.Scripts.Core.Scene
 			{
 				isblocking = false;
 			}
-			faceLayer.DrawLayer(texture, 0, 0, 0, null, 1f, isBustshot: false, 0, wait, isblocking);
+			faceLayer.DrawLayer(texture, 0, 0, 0, null, 1f, /*isBustshot:*/ false, 0, wait, isblocking);
 			faceLayer.gameObject.layer = GetActiveLayerMask();
 			if (faceToUpperLayer)
 			{
@@ -369,7 +369,7 @@ namespace Assets.Scripts.Core.Scene
 			Scene s = GetActiveScene();
 			s.UpdateRange(0f);
 			s.BackgroundLayer.ReleaseTextures();
-			s.BackgroundLayer.DrawLayer(backgroundfilename, 0, 0, 0, null, 0f, isBustshot: false, 0, 0f, isBlocking: false);
+			s.BackgroundLayer.DrawLayer(backgroundfilename, 0, 0, 0, null, 0f, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 			s.SetTransitionMask(maskname);
 			faceLayer.HideLayer();
 			gameSystem.RegisterAction(delegate
@@ -387,7 +387,7 @@ namespace Assets.Scripts.Core.Scene
 			s.GetComponent<Camera>().enabled = false;
 			s.UpdateRange(0f);
 			s.BackgroundLayer.ReleaseTextures();
-			s.BackgroundLayer.DrawLayer(backgroundfilename, 0, 0, 0, null, 0f, isBustshot: false, 0, 0f, isBlocking: false);
+			s.BackgroundLayer.DrawLayer(backgroundfilename, 0, 0, 0, null, 0f, /*isBustshot:*/ false, 0, 0f, /*isBlocking:*/ false);
 			faceLayer.HideLayer();
 			gameSystem.RegisterAction(delegate
 			{
@@ -792,7 +792,7 @@ namespace Assets.Scripts.Core.Scene
 				oldy = y;
 				oldz = z;
 			}
-			layer2.MODDrawLayer(textureName, tex2d, oldx, oldy, oldz, null, 1f, isBustshot: true, type, wait, isblocking);
+			layer2.MODDrawLayer(textureName, tex2d, oldx, oldy, oldz, null, 1f, /*isBustshot:*/ true, type, wait, isblocking);
 			layer2.SetPriority(priority);
 			if (move)
 			{
